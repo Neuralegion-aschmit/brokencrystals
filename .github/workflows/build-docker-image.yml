@@ -26,13 +26,13 @@ jobs:
         npm install
         npm run build 
 
-  build_docker_image:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build Docker image
-        run: docker build . --file Dockerfile --tag neuralegion/brokencrystals
-      - name: Login into Docker
-        run: docker login --username=anatol1988 --password=${{ secrets.DOCKER_TOKEN }}
-      - name: Push Docker image
-        run: docker push neuralegion/brokencrystals
+#  build_docker_image:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Build Docker image
+#        run: docker build . --file Dockerfile --tag neuralegion/brokencrystals
+#      - name: Login into Docker
+#        run: docker login --username=anatol1988 --password=${{ secrets.DOCKER_TOKEN }}
+#      - name: Push Docker image
+#        run: docker push neuralegion/brokencrystals
